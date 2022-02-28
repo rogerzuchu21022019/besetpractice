@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registerFM">
+
+    <fragment
+        android:id="@+id/homeFM"
+        tools:layout="@layout/fragment_home"
+        android:name="nam.rogerzuchu.bestpractice.fragmens.home.HomeFM"
+        android:label="HomeFM" >
+        <action
+            android:id="@+id/action_homeFM_to_registerFM"
+            app:destination="@id/registerFM" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFM"
+        tools:layout="@layout/fragment_register"
+        android:name="nam.rogerzuchu.bestpractice.fragmens.register.RegisterFM"
+        android:label="RegisterFM" >
+        <action
+            android:id="@+id/action_registerFM_to_signInFM"
+            app:destination="@id/signInFM" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFM"
+        tools:layout="@layout/fragment_singin"
+        android:name="nam.rogerzuchu.bestpractice.fragmens.signin.SignInFM"
+        android:label="SignInFM" >
+        <action
+            android:id="@+id/action_signInFM_to_homeFM"
+            app:destination="@id/homeFM" />
+    </fragment>
+</navigation>
